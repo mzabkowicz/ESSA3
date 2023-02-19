@@ -1,4 +1,4 @@
-import numpy as np
+
 """
 * Assignment: Unpack Assignment Split
 * Required: yes
@@ -37,19 +37,21 @@ Tests:
     >>> host
     'nasa.gov'
 """
+def _test():
+    import doctest
+    doctest.testmod()
+
 
 DATA = '10.13.37.1 nasa.gov'
 
 # String with IP address: 10.13.37.1
 # type: str
-ip = ...
+
+result = DATA.split(" ", 1)
+ip = result[0]
 
 # String with host name: nasa.gov
 # type: str
-host = ...
+host = result[1]
 
-# Solution
-ip, host = DATA.split()
-print(ip)
-print(host)
-
+_test()
